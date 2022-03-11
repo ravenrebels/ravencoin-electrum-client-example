@@ -4,7 +4,7 @@ const ElectrumClient = require("@codewarriorr/electrum-client-js");
 //https://electrumx-ravencoin.readthedocs.io/en/latest/protocol.html
 
 async function main() {
-  const client = new ElectrumClient("rvn-dashboard.com", 50002, "ssl");
+  const client = new ElectrumClient("rvn4lyfe.com", 50002, "ssl");
 
   try {
     await client.connect(
@@ -37,7 +37,9 @@ async function main() {
 
     //TODO how to get the script hash?
 
-    const RAVENREBELS = await client.request("blockchain.asset.get_meta", ["RAVENREBELS"]);
+    const RAVENREBELS = await client.request("blockchain.asset.get_meta", [
+      "RAVENREBELS",
+    ]);
 
     console.log("RAVENREBELS", RAVENREBELS);
 
